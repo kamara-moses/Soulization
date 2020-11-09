@@ -50,7 +50,7 @@ main {
 
 section {
     position: relative;
-    min-height: 50vh;
+    min-height: 80vh;
 }
 
 
@@ -171,7 +171,6 @@ section {
 .landing__container {
     padding: 1em;
     text-align: left;
-    width: 100%;
 }
 
 @media only screen and (min-width: 35em) {
@@ -193,18 +192,9 @@ section:nth-of-type(even) .continents {
     text-align: right;
 }
 
-.left {
-    width: 20vw;
-    float: left;
+.continents {
+    width: 30vw;
     border-radius: 10px;
-    margin-right: 20px;
-}
-
-.right {
-    width: 20vw;
-    float: right;
-    border-radius: 10px;
-    margin-left: 20px;
 }
 
 
