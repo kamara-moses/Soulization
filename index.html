@@ -4,42 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Soulization</title>
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    <!-- Load Styles -->
+    <link href="./css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="hero">
-        <nav class="nav-bar">
-            <h1 class="main-title">Soulization</h1>
-            <ul class="nav-links">
-                <li>Home</li>
-                <li>African</li>
-                <li>Asian</li>
-                <li>European</li>
-                <li>North American</li>
-                <li>South American</li>
-            </ul>
-
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+        <nav class="navbar__menu">
+            <!-- Navigation starts as empty UL that will be populated with JS -->
+            <ul id="navbar__list"></ul>
         </nav>
-        <div class="container"></div>
-        <h1 class="main-text">Amazing Soulization of The World</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, labore cumque maxime provident quas, voluptatum omnis tempora aspernatur iure sed dignissimos debitis sit nam officiis ipsa. Optio nemo alias non!</p>
-        <a href="" class="btn"></a>
+        <div id="title">
+            <h1>Soulization</h1>
+        </div>
     </header>
-
     <main>
-        <section class="featured">
-            <div class="container">
-                <h2 class="section-title">
-                    Featured Soulization
-                </h2>
+        <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+        <section id="section1" data-nav="Africa" class="your-active-class">
+            <div class="landing__container">
+                <h2>Africa</h2>
+                <img class="left" src="./images/africa.jpg" alt="Pyramids">
+                <p>Second-largest continent (after Asia), straddling the equator and lying largely within the tropics. Africa's first great civilization emerged in ancient Egypt in c.3400 BC. Carthage was founded by Phoenicians in the 9th century BC.</p>
+
+                <p>Kingdom of Aksum (or Axum), this ancient society is the oldest of the African kingdoms on this list and is spread across what is today Ethiopia and Eritrea in an area where evidence of farming dates back 10,000 years. The Aksumites were
+                    key players in the commercial trading routes which existed between the Romans and Ancient India and they were considered one of the four great powers of their time alongside China, Rome, and Persia.</p>
             </div>
         </section>
+        <section id="section2" data-nav="Antarctica">
+            <div class="landing__container">
+                <h2>Antarctica</h2>
+                <img class="right" src="./images/antarctica.jpg" alt="Antarctica Iceberg">
+                <p>The history of Antarctica emerges from early Western theories of a vast continent, known as Terra Australis, believed to exist in the far south of the globe.</p>
 
-        <section class="history">
+                <p>The term Antarctic, referring to the opposite of the Arctic Circle, was coined by Marinus of Tyre in the 2nd century AD. The rounding of the Cape of Good Hope and Cape Horn in the 15th and 16th centuries proved that Terra Australis Incognita
+                    ("Unknown Southern Land"), if it existed, was a continent in its own right.</p>
+            </div>
+        </section>
+        <section id="section3" data-nav="Asia">
+            <div class="landing__container">
+                <h2>Asia</h2>
+                <img class="left" src="./images/asia.jpg" alt="Asian Civilization Museum">
+                <p>The complex natural and geographical environment and diverse cultures and customs of Asia have given birth to a variety of distinctive regional civilizations over its thousands-year-long history.</p>
 
+                <p>They mainly include the Mesopotamian civilization in Western Asia, the Indian civilization in South Asia, the Umran civilization in Central Asia, and the Chinese civilization in East Asia.</p>
+            </div>
+        </section>
+        <section id="section4" data-nav="Australia">
+            <div class="landing__container">
+                <h2>Australia</h2>
+                <img class="right" src="./images/indigenous.jpg" alt="Indigenous People of Australia">
+                <p>The complex natural and geographical environment and diverse cultures and customs of Asia have given birth to a variety of distinctive regional civilizations over its thousands-year-long history.</p>
+
+                <p>They mainly include the Mesopotamian civilization in Western Asia, the Indian civilization in South Asia, the Umran civilization in Central Asia, and the Chinese civilization in East Asia.</p>
+            </div>
+        </section>
+        <section id="section5" data-nav="Europe">
+            <div class="landing__container">
+                <h2>Europe</h2>
+                <img class="left" src="./images/trajan.jpeg" alt="Trajan's Market">
+                <p>The complex natural and geographical environment and diverse cultures and customs of Asia have given birth to a variety of distinctive regional civilizations over its thousands-year-long history.</p>
+
+                <p>They mainly include the Mesopotamian civilization in Western Asia, the Indian civilization in South Asia, the Umran civilization in Central Asia, and the Chinese civilization in East Asia.</p>
+            </div>
+        </section>
+        <section id="section6" data-nav="North America">
+            <div class="landing__container">
+                <h2>North America</h2>
+                <img class="right" src="./images/mayan.jpeg" alt="Mayan Pyramid">
+                <p>The complex natural and geographical environment and diverse cultures and customs of Asia have given birth to a variety of distinctive regional civilizations over its thousands-year-long history.</p>
+
+                <p>They mainly include the Mesopotamian civilization in Western Asia, the Indian civilization in South Asia, the Umran civilization in Central Asia, and the Chinese civilization in East Asia.</p>
+            </div>
+        </section>
+        <section id="section7" data-nav="South America">
+            <div class="landing__container">
+                <h2>South America</h2>
+                <img class="left" src="./images/aztec.jpeg" alt="Aztec Carvings">
+                <p>The complex natural and geographical environment and diverse cultures and customs of Asia have given birth to a variety of distinctive regional civilizations over its thousands-year-long history.</p>
+
+                <p>They mainly include the Mesopotamian civilization in Western Asia, the Indian civilization in South Asia, the Umran civilization in Central Asia, and the Chinese civilization in East Asia.</p>
+            </div>
         </section>
     </main>
+    <footer class="page__footer">
+        <p>&copy Moses Kamara</p>
+        <button onclick="topFunction()" id="topBtn" title="Go to top"><img src="./images/up.svg"></button>
+    </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
